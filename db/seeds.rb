@@ -8,3 +8,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Phrase.create(phrase_content: 'ICEBOX', phrase_hint: 'Baby its cold in here')
+Phrase.create(phrase_content: 'BIKINI', phrase_hint: 'Ready for the beach')
+Phrase.create(phrase_content: 'WIZZARD', phrase_hint: 'Hi, I am Harry Potter')
