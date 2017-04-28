@@ -1,9 +1,6 @@
-curl --include --request DELETE http://localhost:4741/games/1
-
 #!/bin/bash
-# run as sh scripts/games/delete-game.sh
 
-TOKEN="BAhJIiUyNzIwNDhhZWRjZWNjMmU0MjhhYjZkMjEzYjkyMDZmOAY6BkVG--17696fca22d8d0f4734b619314151046355db51d"
+# TOKEN=BAhJIiUzNTUwOWMyMTM2Y2ExNzUxYTFiNjgyMGYxNmE4OWQ2OAY6BkVG--e80d6ffc766f11dd54233cf5df51f47ff300dd63 sh scripts/games/show-games.sh
 
 # API="${API_ORIGIN:-http://localhost:4741}"
 # URL_PATH="/games"
@@ -17,5 +14,5 @@ TOKEN="BAhJIiUyNzIwNDhhZWRjZWNjMmU0MjhhYjZkMjEzYjkyMDZmOAY6BkVG--17696fca22d8d0f
 
 
 
-curl --include --request DELETE http://localhost:4741/games/5 \
+curl --include --request GET http://localhost:4741/games \
   --header "Authorization: Token token=$TOKEN"

@@ -15,30 +15,39 @@ class PhrasesController < ApplicationController
     render json: @phrase
   end
 
-  # POST /phrases
-  def create
-    @phrase = Phrase.new(phrase_params)
+  # picker will randomly select a phrase form the phrases table
 
-    if @phrase.save
-      render json: @phrase, status: :created, location: @phrase
-    else
-      render json: @phrase.errors, status: :unprocessable_entity
-    end
+  # do something here
+  def picker
+    # @phrases = Phrase.all
+    @phrases = Phrase.order('RANDOM()').first
+    render json: @phrases
   end
+
+# POST /phrases
+  # def create
+  #   @phrase = Phrase.new(phrase_params)
+  #
+  #   if @phrase.save
+  #     render json: @phrase, status: :created, location: @phrase
+  #   else
+  #     render json: @phrase.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # PATCH/PUT /phrases/1
-  def update
-    if @phrase.update(phrase_params)
-      render json: @phrase
-    else
-      render json: @phrase.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /phrases/1
-  def destroy
-    @phrase.destroy
-  end
+  # def update
+  #   if @phrase.update(phrase_params)
+  #     render json: @phrase
+  #   else
+  #     render json: @phrase.errors, status: :unprocessable_entity
+  #   end
+  # end
+  #
+  # # DELETE /phrases/1
+  # def destroy
+  #   @phrase.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

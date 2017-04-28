@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :phrases, only: [:index, :show]
   resources :examples, except: [:new, :edit]
   resources :games, except: [:new, :edit]
+  get '/phrase_picker' => 'phrases#picker'
 end

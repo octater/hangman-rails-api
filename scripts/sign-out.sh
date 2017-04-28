@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ID=1 TOKEN="BAhJIiU1MDQ4NGY1ODhiNGMwMDNlNDE0NTQzZmNkYTk0ZmU0YgY6BkVG--761bcfe0d0d4a8ef6cc07a5764f96a1eb78cef9e" scripts/sign-out.sh
+# ID=4 TOKEN="BAhJIiVlODBlYzBjMzUwYmM0YjU0MGMwMDhmMzVhMDNlNmM0MgY6BkVG--edc977070125efaf322d674fbede8120339f66b3" scripts/sign-out.sh
 
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/sign-out"
