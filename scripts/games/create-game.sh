@@ -1,12 +1,15 @@
 #!/bin/bash
 
-# TOKEN="BAhJIiUyOWU3MTJhY2JkYjg5MWRhNjM2MTFmMzQ4ZTdhNGI1MgY6BkVG--3029a6eacbb6252d29b27d42ae219ebb8b8ceef2" sh scripts/games/create-game.sh
+# TOKEN="BAhJIiVlN2I2MmVjMDE5YjFiOWVlZjMyZmI4ODFhYmQ2Y2I3NgY6BkVG--7ef3a3dead45e71c9617279bf655891b73a5e728" sh scripts/games/create-game.sh
 
 curl --include --request POST http://localhost:4741/games \
   --header "Authorization: Token token=$TOKEN" \
   --header "Content-Type: application/json" \
   --data '{
     "game": {
-      "phrase_id": '3'
+      "phrase_id": '10',
+      "user_id": '12',
+      "letters_played": '0',
+      "game_status": '0'
     }
   }'
